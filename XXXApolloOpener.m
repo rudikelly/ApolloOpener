@@ -22,10 +22,10 @@
     if ([url.host containsString:@"reddit.com"]) {
       urlString.scheme = @"apollo";
 
-		if([urlString isEqualToString:@"apollo://www.reddit.com/"] || [urlString isEqualToString:@"apollo://reddit.com/"] || [urlString isEqualToString:@"apollo://www.reddit.com"] || [urlString isEqualToString:@"apollo://reddit.com"]){
-			urlString = @"apollo://";
-		}
-        return [NSURL URLWithString:urlString];
+    if([urlString isEqualToString:@"apollo://www.reddit.com/"] || [urlString isEqualToString:@"apollo://reddit.com/"] || [urlString isEqualToString:@"apollo://www.reddit.com"] || [urlString isEqualToString:@"apollo://reddit.com"]){
+      urlString = @"apollo://";
+    }
+      return [NSURL URLWithString:urlString];
     }
 
     return nil;
