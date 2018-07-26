@@ -19,7 +19,7 @@
 
 - (id)openURL:(NSURL *)url sender:(NSString *)sender {
 	NSString *urlString = [url.absoluteString lowercaseString];
-    if ([url.host isEqualToString:@"www.m.reddit.com"] || [url.host isEqualToString:@"www.reddit.com"] || [url.host isEqualToString:@"m.reddit.com"] || [url.host isEqualToString:@"reddit.com"] || [url.host containsString:@".reddit.com"]) {
+    if ([url.host containsString:@"reddit.com"]) {
       urlString.scheme = @"apollo";
 
 		if([urlString isEqualToString:@"apollo://www.reddit.com/"] || [urlString isEqualToString:@"apollo://reddit.com/"] || [urlString isEqualToString:@"apollo://www.reddit.com"] || [urlString isEqualToString:@"apollo://reddit.com"]){
